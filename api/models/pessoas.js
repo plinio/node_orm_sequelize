@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       where: {
         ativo: true //por padrão o sequelize vai colocar esse where na rota get Pessoas
       }
+    },
+    scopes:{
+      todos: {
+        where: {}
+      }
     }
   });
   Pessoas.associate = function(models) {
