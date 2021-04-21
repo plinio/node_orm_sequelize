@@ -38,7 +38,9 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'docente_id'
     }) 
     Pessoas.hasMany(models.Matriculas, {
-      foreignKey: 'estudante_id'
+      foreignKey: 'estudante_id',
+      scope: { status: 'confirmado' }, //escopo de associação (mixins)
+      as: 'aulasMatriculadas' //alias do escopo de associacao (mixins), assim posso chamar pessoa.getAulasMatriculadas()
     })
 
   };
