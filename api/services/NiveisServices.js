@@ -7,4 +7,4 @@ class NiveisServices extends Services{
     //métodos específicos do controlador de Pessoas
 }
 
-module.exports = Niveis
+module.exports = NiveisServices
